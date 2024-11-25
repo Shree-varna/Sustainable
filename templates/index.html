@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EcoShip Recommendations</title>
+    <!-- Materialize CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" rel="stylesheet">
+    <!-- Font Awesome for Icons -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        /* Background and General Body Styling */
+        body {
+            background: linear-gradient(135deg, #e8f5e9, #a5d6a7);
+            font-family: 'Roboto', sans-serif;
+        }
+
+        /* Header Section */
+        .header {
+            background: url('https://cdn.pixabay.com/photo/2016/03/31/20/11/forest-1294332_1280.jpg') center center/cover no-repeat;
+            color: #4e4a4a;
+            text-align: center;
+            padding: 50px 20px;
+        }
+
+        .header h1 {
+            font-size: 3rem;
+            margin: 0;
+            text-shadow: 1px 1px 3px #000;
+        }
+
+        .header p {
+            font-size: 1.2rem;
+            margin-top: 10px;
+            text-shadow: 1px 1px 2px #000;
+        }
+
+        /* Form Section Styling */
+        .form-box {
+            max-width: 600px;
+            margin: 30px auto;
+            padding: 20px;
+            border-radius: 12px;
+            background-color: #f5f9f2;
+            box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .btn-custom {
+            background-color: #4caf50 !important;
+            color: white !important;
+            border-radius: 8px;
+        }
+
+        .btn-custom:hover {
+            background-color: #43a047 !important;
+        }
+
+        /* Output Section Styling */
+        #output {
+            max-width: 700px;
+            margin: 30px auto;
+            padding: 20px;
+            border-radius: 12px;
+            background-color: rgba(245, 246, 244, 0.95);
+            box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .card-panel {
+            background: #e1e8d8;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .card-panel h4 {
+            font-size: 1.8rem;
+            color: #2e7d32;
+        }
+
+        .divider {
+            margin: 20px 0;
+        }
+
+        /* Icon Styling */
+        .icon {
+            font-size: 1.5rem;
+            margin-right: 8px;
+            color: #4caf50;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header Section -->
+    <div class="header">
+        <h1>Sustainable Packaging Material Predictor</h1>
+        <p>Smart, sustainable, and efficient packaging solutions</p>
+    </div>
+
+    <!-- Form Section -->
+    <div class="card z-depth-3 form-box">
+        <form id="recommendForm">
+            <div class="input-field">
+                <i class="material-icons prefix"></i>
+                <input type="text" id="location" class="validate" required>
+                <label for="location">Enter location</label>
+            </div>
+            <div class="input-field">
+                <i class="material-icons prefix"></i>
+                <input type="text" id="productType" class="validate" required>
+                <label for="productType">Enter Product Type</label>
+            </div>
+            <div class="center-align">
+                <button type="submit" class="btn btn-custom waves-effect waves-light">Get Recommendations</button>
+            </div>
+        </form>
+    </div>
+
+    <!-- Output Section -->
+    <div id="output" class="z-depth-2">
+        <div class="card-panel">
+            <h4 class="center-align green-text text-darken-2">Your Recommendations</h4>
+            <div class="divider"></div>
+            <p class="center-align grey-text text-darken-1">Your results will appear here...</p>
+        </div>
+    </div>
+
+    <!-- Materialize JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <!-- Font Awesome JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/js/all.min.js"></script>
+    <script src="/static/script.js"></script>
+</body>
+</html>
